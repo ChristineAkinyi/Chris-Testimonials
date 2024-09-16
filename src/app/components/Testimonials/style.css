@@ -1,4 +1,6 @@
-
+body,html {
+  overflow-x: hidden !important;
+}
 .header-bg {
     background-color: #f5f5f5;
   }
