@@ -1,54 +1,65 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import './style.css';
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 const Testimonials = () => {
   return (
     <>
-      <header className="text-center mt-8 header-bg">
-        <h1 className="font-nunito text-customBlue font-extrabold text-4xl md:text-5xl lg:text-6xl header-title">
+      <header className="text-center mt-8">
+        <h1 className="font-sans text-customBlue is:text-[26px] font-extrabold lg:text-[54px] text-[26px] md:text-[40px] im:text-[40px] nh:text-[54px]">
           Testimonials
         </h1>
       </header>
-      <section className="bg-customGreen pt-20 text-white flex flex-col md:flex-row gap-16 lg:gap-24 pb-44 relative">
-        <div className="md:ml-16 flex items-center justify-end">
-          <Image
-            src="/images/woman.png"
-            alt="Woman"
-            width={352}
-            height={308}
-            className="testimonial-img"
-          />
-        </div>
-        <div className="text-center md:text-left flex flex-col justify-center ml-32px">
-          <Image src="/images/quotes.png" alt="Quotes" width={105.29} height={103} className="quote-1" />
-          <h2 className="font-extrabold mb-4 text-xl md:text-2xl lg:text-3xl testimonial-title" style={{ fontSize: '32px' }}>
-            AMAZING CUSTOMER EXPERIENCE
-          </h2>
-          <p className="text-base md:text-lg lg:text-xl mt-5 testimonial-text" style={{ fontSize: '28px' }}>
-            SawaTok is really the best option.<br />
-            After doc prescribed it to me, my<br />
-            child's fluency has been improving a lot!
-          </p>
-          <div className="quote-2-wrapper">
-            <Image
-              src="/images/quotes.png"
-              alt="Quotes"
-              width={105.29}
-              height={103}
-              className="quote-2"
-            />
-          </div>
-        </div>
-        <div className="flex items-center justify-center md:justify-end">
-          <FontAwesomeIcon icon={faChevronRight} className="text-2xl md:text-3xl w-[25px] h-[70px] mt-12 chev-arrow"/>
-        </div>
-      </section>
+     
+
+
+<section className="pt-20 bg-customGreen pb-16 md:pt-32 md:pb-32 text-white flex flex-col">
+
+  <div className="flex flex-col md:flex-row items-center justify-between w-full -mt-10">
+
+ 
+    <div className="flex items-center justify-center w-full mb-8 md:mb-0 lg:mr-38">
+      <Image
+        src="/images/woman.png"
+        alt="Woman"
+        width={242}
+        height={258}
+        className="w-[120px] h-[130px] md:w-[352px] md:h-[352px] nh:w-[200px] nh:h-[200px] md:rounded-full max-w-full im:w-[250px] im:h-[240px]"
+      />
+    </div>
+
+    
+    <div className="text-center md:text-left nh:text-[24px] flex flex-col justify-center w-full px-4 md:px-8 lg:px-16">
+
+     
+      <RiDoubleQuotesL className="text-customBlue text-[50px] font-nunito  is:text-[50px] md:text-4xl lg:text-8xl mb-4 -ml-2" />
+      <div className="w-full lg:w-[400px]">
+        <h2 className="font-extrabold mb-4 font-sans im:text-[24px] text-[24px] md:text-[24px] is:text-[24px] nh:text-[30px] text-left lg:text-[32px] sm-text[24px]">
+          AMAZING CUSTOMER EXPERIENCE
+        </h2>
+      </div>
+      <p className="w-full text-[16px] font-sans  md:w-96 is:text-[16px] lg:w-[600px] nh:text-[30px] sm:text-[18px] im:text-[24px] md:text-[18px] text-left mt-4 lg:text-[32px]">
+        SawaTok is really the best option.
+        After doc prescribed it to me, my
+        child's fluency has been improving alot!
+      </p>
+
+   
+      <RiDoubleQuotesR className="text-customBlue text-[50px] md:text-4xl lg:text-8xl mt-4 ml-4 md:ml-8 lg:ml-16" />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
     </>
   );
 };
-
 export default Testimonials;
